@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    width: 500px;
+    padding: 30px;
+    background-color: steelblue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* отступы между flex элемнтами */
+}
+button {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: rgb(237, 200, 53);
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+}
