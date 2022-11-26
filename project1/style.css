@@ -6,8 +6,15 @@
 body {
     height: 100vh;
     display: flex;
+    flex-wrap: wrap; 
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+    width: 100%;
+    text-align: center;
 }
 main {
     width: 500px;

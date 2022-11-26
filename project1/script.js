@@ -31,20 +31,61 @@
 // Найти последний элемент тега main 
 // let main = document.querySelector("main")
 // console.log(main.lastChild)
+let title = document.querySelector("h1") // в title лежит тег h1
 
 let orangeBtn = document.querySelector("#orange")
-orangeBtn.style.backgroundColor = "orange"
+orangeBtn.addEventListener("click", function() { // callback-функция обратного вызова
+    document.body.style.backgroundColor = "orange" // меняем цвет фона body
+    let descr = document.querySelector("h1")
+    // перемеенная descr видна только внутри фигурных скобок, где она была создана
+    console.log(descr) 
+})
+// console.log(descr) // не видна 
+let redBtn = document.querySelector("#red")
+redBtn.addEventListener("click", function() { // callback-функция обратного вызова
+    document.body.style.background = "red" // меняем цвет фона body
+    // ваш код
+})
+
+let greenBtn = document.querySelector("#green")
+greenBtn.addEventListener("click", function() { // callback-функция обратного вызова
+    document.body.style.background = "green" // меняем цвет фона body
+})
+
+let blueBtn = document.querySelector("#blue")
+blueBtn.addEventListener("click", function() { // callback-функция обратного вызова
+    document.body.style.background = "blue" // меняем цвет фона body
+})
+
+let imgBtn = document.querySelector("#img")
+imgBtn.addEventListener("click", function() {
+    document.body.style.background = "url(./images/img1.jpg)"
+})
+
+// console.log(title.textContent) 
+title.textContent = "Hello Arsen"
+
+
+// Задача. При нажатии на каждую кнопку менять цвет body на соответствующий
+// и в h1 должен появляться текст с цветом,который вы добавили
+// redBtn -> цвет body = red  -> в h1 должно быть "Красный"
+// blueBtn -> цвет body = blue
+//  
+
+// Задача. Внутри коллбэк функции написать действие, которое поменяет цвет фона body на orange
 
 // Задача. Найти тег button со значением Orange и поменять его цвет на orange. querySelector("")
-
+// function hello() {}; hello() - immediately invoke function. вы инициатор вызова
 /*
+    textContent - свойство, которое позволяет вернуть или изменить текст внутри тега(текстовый контент)
+
     Element = тег
     document = родительский узел всей html страницы
     Для того, чтобы найти любой элемент на странице из JS, нужно применить метод document.querySelector("selector")
     Селекторы:
         1) По тегу main {}
         2) По классу .btn {}
-        3) По id #red{}
+        3) По id #red {}
 
     bodyStyle = {
         width: "", 
