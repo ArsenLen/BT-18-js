@@ -253,10 +253,31 @@
 
 
 let firstProduct = document.querySelector(".product")
+let products = document.querySelectorAll(".product")
 
-console.log(firstProduct.classList)
+for(let i = 0; i < products.length; i++) {
+    // console.log(products[i])
+    products[i].addEventListener("click", function() {
+        products[i].classList.toggle("active")
+    })
+}
+/*
+    ДЗ. При нажатии на каждый элемент удалять класс active у всех, а к нажатому элементу добавлять
+*/
+
+// console.log(firstProduct.classList.value)
+
+// Задача. Добавить класс active к элементу
+// firstProduct.classList.add("active")
+// Задача. При нажатии на каждый элемент добавлять класс active к нему. 
+
 /*
     classList - свойство тега, которое отображает список классов тега
+    classList.value - отображает классы тега в текстовом формате - типДанных - строкаString
+    classList.add(className) - метод, который позволяет добавить класс
+    classList.remove(className) - метод, который позволяет удалить класс
+    classList.toggle(className) - метод, который позволяет добавить класс, если его нет
+                                и удалить его, если он есть
 */
 
 

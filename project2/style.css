@@ -31,3 +31,6 @@ main {
 .currentName, .currentPrice {
     font-size: 28px;
 }
+.active {
+    background-color: rgb(66, 151, 212);
+}
