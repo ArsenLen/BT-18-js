@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+}
+main {
+    width: 75%;
+    margin: auto;
+}
+.product {
+    padding: 20px 30px;
+    background-color: rgb(198, 209, 80);
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.product:not(:last-child) {
+    margin-bottom: 20px;
+}
+.name, .price {
+    font-size: 24px;
+}
+.total {
+    background-color: rgb(57, 174, 116);
+    padding: 30px;
+    border-radius: 15px;
+}
+.currentName, .currentPrice {
+    font-size: 28px;
+}

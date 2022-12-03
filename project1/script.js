@@ -31,39 +31,39 @@
 // Найти последний элемент тега main 
 // let main = document.querySelector("main")
 // console.log(main.lastChild)
-let title = document.querySelector("h1") // в title лежит тег h1
+// let title = document.querySelector("h1") // в title лежит тег h1
 
-let orangeBtn = document.querySelector("#orange")
-orangeBtn.addEventListener("click", function() { // callback-функция обратного вызова
-    document.body.style.backgroundColor = "orange" // меняем цвет фона body
-    let descr = document.querySelector("h1")
-    // перемеенная descr видна только внутри фигурных скобок, где она была создана
-    console.log(descr) 
-})
-// console.log(descr) // не видна 
-let redBtn = document.querySelector("#red")
-redBtn.addEventListener("click", function() { // callback-функция обратного вызова
-    document.body.style.background = "red" // меняем цвет фона body
-    // ваш код
-})
+// let orangeBtn = document.querySelector("#orange")
+// orangeBtn.addEventListener("click", function() { // callback-функция обратного вызова
+//     document.body.style.backgroundColor = "orange" // меняем цвет фона body
+//     let descr = document.querySelector("h1")
+//     // перемеенная descr видна только внутри фигурных скобок, где она была создана
+//     console.log(descr) 
+// })
+// // console.log(descr) // не видна 
+// let redBtn = document.querySelector("#red")
+// redBtn.addEventListener("click", function() { // callback-функция обратного вызова
+//     document.body.style.background = "red" // меняем цвет фона body
+//     // ваш код
+// })
 
-let greenBtn = document.querySelector("#green")
-greenBtn.addEventListener("click", function() { // callback-функция обратного вызова
-    document.body.style.background = "green" // меняем цвет фона body
-})
+// let greenBtn = document.querySelector("#green")
+// greenBtn.addEventListener("click", function() { // callback-функция обратного вызова
+//     document.body.style.background = "green" // меняем цвет фона body
+// })
 
-let blueBtn = document.querySelector("#blue")
-blueBtn.addEventListener("click", function() { // callback-функция обратного вызова
-    document.body.style.background = "blue" // меняем цвет фона body
-})
+// let blueBtn = document.querySelector("#blue")
+// blueBtn.addEventListener("click", function() { // callback-функция обратного вызова
+//     document.body.style.background = "blue" // меняем цвет фона body
+// })
 
-let imgBtn = document.querySelector("#img")
-imgBtn.addEventListener("click", function() {
-    document.body.style.background = "url(./images/img1.jpg)"
-})
+// let imgBtn = document.querySelector("#img")
+// imgBtn.addEventListener("click", function() {
+//     document.body.style.background = "url(./images/img1.jpg)"
+// })
 
-// console.log(title.textContent) 
-title.textContent = "Hello Arsen"
+// // console.log(title.textContent) 
+// title.textContent = "Hello Arsen"
 
 
 // Задача. При нажатии на каждую кнопку менять цвет body на соответствующий
@@ -106,3 +106,29 @@ title.textContent = "Hello Arsen"
     Найти каждую кнопку по id.
     И поменять цвет каждой кнопки на соответствующий.
 */
+
+
+/*
+    При нажатии на каждую кнопку менять цвет фона body на соответсвующий
+
+    1. Найти все кнопки. querySelectorAll() 
+    2. На каждую кнопку повесить слушатель события. for() addEventListener()
+    3. При нажатии на каждую кнопку выводить в консоли "hello"
+    4. При нажатии на каждую кнопку в консоли выводить значение атрибута id каждой кнопки
+    5. При нажатии на каждую кнопку в h1 добавлять значение id каждой кнопки
+*/
+
+// red, green
+
+let buttons = document.querySelectorAll("button")
+
+for(let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function() {
+       let btnId = buttons[i].getAttribute("id") // red, green, blue, img
+       if(btnId == "img") {
+        document.body.style.background = "url(./images/img1.jpg)"
+       } else {
+        document.body.style.background = btnId 
+       }
+    })
+}
