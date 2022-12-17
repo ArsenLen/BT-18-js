@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    position: relative;
+}
+.form-wrapper {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: darksalmon;
+    border-radius: 15px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    border: none;
+    outline: none; /* дополнительная граница тега */
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    padding: 12px 24px;
+}
+.product {
+    width: 600px;
+    background-color: darksalmon;
+    padding: 30px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+h1, h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+p {
+    font-size: 24px;
+    font-style: italic;
+}
+input[type="color"] {
+    width: 100%;
+    padding: 5px;
+}
+.notification {
+    display: none;
+    width: 300px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    border: 4px solid rgb(138, 189, 138);
+    color: black;
+    border-radius: 5px;
+    box-shadow:  7px 7px 0px 0px rgb(138, 189, 138);
+}
+.notification-text {
+    font-size: 28px;
+    font-style: italic;
+    padding: 10px;
+    text-align: center;
+}
+.search-wrapper {
+    width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: darksalmon;
+    border-radius: 15px;
+}
+.product-search {
+    width: 100%;
+    font-size: 20px;
+}
