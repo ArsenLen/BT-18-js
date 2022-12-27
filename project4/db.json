@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone 14",
+      "price": 100000,
+      "color": "pink"
+    },
+    {
+      "id": 2,
+      "name": "Samsung S20",
+      "price": 120000,
+      "color": "black"
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi Redmi M523",
+      "price": 150000,
+      "color": "white"
+    },
+    {
+      "id": 4,
+      "name": "test",
+      "price": 100000,
+      "color": "test"
+    }
+  ]
+}

@@ -72,7 +72,7 @@
 // })
 
 // Входные данные
-let productsContainer = document.querySelector(".products-container")
+let productsContainer = document.querySelector(".products-container") // контейнер для отображения продуктов
 
 let products = [
     {
@@ -121,7 +121,7 @@ function showProductForEach(arr) {
         productsContainer.innerHTML += `
                 <div class="product">
                     <h5 class="product-name">
-                        ${element.name}
+                        ${element.name} 
                     </h5>
                     <p class="product-color">${element.color}</p>
                     <p class="product-price">${element.price}</p>
@@ -177,11 +177,22 @@ function showNotification() {
     ), 3000)
 }
 
+// Вешаем слушатель события на input и вызываем фукнция фильтрации каждый раз, когда пользователь что-то вводит
+productSearch.addEventListener("input", function(e) {
+    // e.target - элемент, который вызвал событие
+    console.log(productSearch.value) // строка, которую вводит пользователь
+    let queryStr = productSearch.value // строка запроса фильтрации
+    let filteredProducts = filterProducts(queryStr) // отфильтрованный массив
+    showProductForEach(filteredProducts)
+})
+
+
+// функция, которая принимает строку и фильтрует массив
 function filterProducts(str) {
     // содержится ли подстрока str в свойстве name каждого объекта
     // содержится ли введенное значение в имени продукта
-    return products.filter(product => {
-        product.name.includes(str)
+    return products.filter(function(product) {
+        return product.name.includes(str)
     })
 }
 
@@ -230,6 +241,10 @@ function filterProducts(str) {
         тело функции // действие
     })
 */
+
+// Сделать так, чтобы фильтрация работала без учета регистра введных букв.
+// https://doka.guide/js/function/
+// 
 
 
 
