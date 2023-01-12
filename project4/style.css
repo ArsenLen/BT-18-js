@@ -25,12 +25,38 @@ input {
     border-radius: 8px;
     padding: 12px 24px;
 }
+.products-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
 .product {
-    width: 600px;
-    background-color: darksalmon;
+    width: calc(33% - 20px);
+    background-color: khaki;
     padding: 30px;
-    margin: 10px auto;
+    margin: 10px;
     border-radius: 8px;
+}
+.product-name {
+    font-size: 24px;
+    text-align: center;
+}
+.product-price, .product-color {
+    font-size: 20px;
+}
+.product-color {
+    margin: 15px 0;
+}
+.delete-btn {
+    margin-top: 20px;
+    background-color: rgb(181, 44, 44);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
 }
 h1, h2 {
     font-size: 36px;

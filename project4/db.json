@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Iphone 14",
-      "price": 100000,
+      "price": 10000,
       "color": "pink"
     },
     {
@@ -17,12 +17,6 @@
       "name": "Xiaomi Redmi M523",
       "price": 150000,
       "color": "white"
-    },
-    {
-      "id": 4,
-      "name": "test",
-      "price": 100000,
-      "color": "test"
     }
   ]
 }

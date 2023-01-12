@@ -1,120 +1,28 @@
-/*  
-    textContent 
-    style
-    classList
-    innerHTML - возвращает HTML контент тега и позволяет его изменять
-    child
-    parent
-
-    querySelector
-    querySelectorAll
-    getAttribut
-*/
-
-// console.log(document.body.innerHTML)
-
-// let main = document.querySelector("main")
-// // main.innerHTML = "<h1>Hello World</h1>"
-
-// let user = {
-//     name : "Arsen",
-//     age: 24,
-//     sex: "male",
-//     phone: "0555555555",
-//     prof: "Frontend Developer",
-//     hobbies: ["Football", "Design"]
-// }
-// let user1 = {
-//     name : "Kenan",
-//     age: 24,
-//     sex: "male",
-//     phone: "035421323",
-//     prof: "Frontend Developer",
-//     hobbies: ["Football", "CSGO"]
-// }
-// let mr = "Mr."
-// Добавить тег h1 в main с именем пользователя из объекта user и приставкой Mr.
-// main.innerHTML = `
-//     <div class="user">
-//         <h1>Mr. ${user.name}</h1>
-//         <p>Age ${user.age}</p>
-//         <div>Hobbies ${user.hobbies}</div>
-//     </div>
-//     `
-
-// В тег main вывести карточку пользователя user1, с именем, возрастом и хобби, чтобы предыдущий
-// пользователь тоже оставался
-// main.innerHTML += `
-//     <div class="user">
-//         <h1>Mr. ${user1.name}</h1>
-//         <p>Age ${user1.age}</p>
-//         <div>Hobbies ${user1.hobbies}</div>
-//     </div>
-// `
-
-// function showUser(obj) {
-//     main.innerHTML += `
-//         <div class="user">
-//             <h1>Mr. ${obj.name}</h1>
-//             <p>Age ${obj.age}</p>
-//             <div>Hobbies ${obj.hobbies}</div>
-//         </div>
-//     `
-// }
-
-// showUser(user) // immediately invoke function. недемленный вызов функции
-// showUser(user1)
-
-// showUser({
-//     name : "Aleksandr",
-//     age : 39,
-//     hobbies : ["Fishing"]
-// })
-
 // Входные данные
 let productsContainer = document.querySelector(".products-container") // контейнер для отображения продуктов
+let productForm = document.querySelector("form")
+let productName = document.querySelector("input[name='product-name']")
+let productPrice = document.querySelector("input[name='product-price']")
+let productColor = document.querySelector("input[name='product-color']")
+let notification = document.querySelector(".notification")
+let productSearch = document.querySelector(".product-search")
+const API_URL = 'http://localhost:3000/products'
 
-let products = [
-    {
-        name : "Iphone 14",
-        price : 100000,
-        color: "pink"
-    },
-    {
-        name : "Samsung S20",
-        price : 120000,
-        color: "Черный"
-    },
-    {
-        name : "Xiaomi Redmi M523",
-        price : 150000,
-        color: "Белый"
-    }
-]
 
-/* 
-    {
-        name: 'Test',
-        price: '4535', 
-        color: '#e60a0a'
-    }
-*/
+// функция, которая выполняет GET-запрос и вызывает первую отрисовку
+function getProducts() {
+    let data = fetch(API_URL)
+    data
+        .then(function(res) {
+            return res.json() // вычленяем полезные(payload) данные из ответа от сервера(response=res) 
+        })
+        .then(function(products) {
+            showProductForEach(products) //products = [{product}, {products}, {}]
+        })
+}
+getProducts() // вызов функции для первой отрисовки
 
-// function showProduct(arr) {
-//     for(let i = 0; i < arr.length; i++) {
-//         productsContainer.innerHTML += `
-//                 <div class="product">
-//                     <h5 class="product-name">
-//                         ${arr[i].name}
-//                     </h5>
-//                     <p class="product-color">${arr[i].color}</p>
-//                     <p class="product-price">${arr[i].price}</p>
-//                 </div>
-//             `
-//     }
-// }
-// showProduct(products)
-
+// функция отрисовки в html, которая использует данные с сервера ([{}, {}])
 function showProductForEach(arr) {
     productsContainer.innerHTML = '' 
     arr.forEach(function(element) {
@@ -123,22 +31,13 @@ function showProductForEach(arr) {
                     <h5 class="product-name">
                         ${element.name} 
                     </h5>
-                    <p class="product-color">${element.color}</p>
-                    <p class="product-price">${element.price}</p>
+                    <p class="product-color"><b>Цвет</b>: ${element.color}</p>
+                    <p class="product-price"><b>Цена</b>: ${element.price} сом</p>
+                    <button class="delete-btn" id=${element.id}>Удалить</button>
                 </div>
             `
     })
 }
-showProductForEach(products) 
-
-
-/* обрабатываем форму */
-let productForm = document.querySelector("form")
-let productName = document.querySelector("input[name='product-name']")
-let productPrice = document.querySelector("input[name='product-price']")
-let productColor = document.querySelector("input[name='product-color']")
-let notification = document.querySelector(".notification")
-let productSearch = document.querySelector(".product-search")
 
 // Слушаем отправку формы, т.е добавление продукта
 productForm.addEventListener("submit", function(event) {
@@ -152,13 +51,23 @@ productForm.addEventListener("submit", function(event) {
         price: newPrice,
         color: newColor
     }
-    //products =  [{}, {}, {}]
-    products.push(productInfo)
-    //products = [{}, {}, {}, {}]
-    // products.shift()
-    // products = [{}]
-    // Отображение продуктов после добавление нового продукта
-    showProductForEach(products)
+    // Отправка post запроса с телом, в котором лежит JSON строка. 
+    // JSON строка конвертируется из объекта productInfo
+    fetch(API_URL, {
+        method: "POST",
+        headers: {
+            "Content-Type" : "application/json"
+        },
+        body: JSON.stringify(productInfo)
+    }) // В ответ на fetchPOST приходит ответ с добавленным в БД объектом
+    .then(function(res) { // функция выполнится только если промис перешел в fullfilled(зарезолвился) успешно
+        // Вызываем GET-запрос для того, чтобы получить обновленную БД
+        getProducts()
+        showNotification() // можем вызывать уведомление только внутри then
+    })
+    .catch(function(err) {  // функция выполнится если произошла ошибка
+        console.log(err)
+    })
     // Очистка полей ввода после добавления продукта
     clearInputs() 
 })
@@ -196,6 +105,27 @@ function filterProducts(str) {
     })
 }
 
+// слушаем нажатие по кнопкам delete-btn
+document.addEventListener("click", function(e) {
+    if(e.target.className === "delete-btn") {
+        deleteProduct(e.target.id) // 4
+    }
+})
+
+// удаление документа с сервера
+function deleteProduct(id) {
+    fetch(`http://localhost:3000/products/${id}`, { // http://localhost:3000/products/4
+        method : "DELETE"
+    })
+}
+
+/* 
+    ДЗ. После удаления продукта перерисововать интерфейс без перезагрузки страницы
+        Отобразить уведомление об удалении, если оно прошло успешно. 
+*/
+
+// задача. при нажатии на кнопку "удалить" в консоли отобразить
+//  id этой кнопки
 /*
     Алгоритм поиска
     1. Содержится ли подстрока в строке
@@ -304,4 +234,30 @@ function filterProducts(str) {
 // В консоли отобразить второе хобби
 // console.log(user.hobbies[1]) // let hobbies = ["Football", "Design"] hobbies[1]
 
+// GET запрос - запрос на получение данных
+// https://randomuser.me/api/ - ссылка на random user
+// http://localhost:3000/products - ссылка на json server
 
+    
+    
+
+// Request - запрос на сервер
+// Response - ответ от сервера
+
+
+// Есть ссылка https://randomuser.me/api?results=5
+// 
+
+console.log(products)
+products = {
+    results: [{name: "Arsen"}, {}, {}] , 
+    info: {}
+}
+products.results[0].name
+
+
+products.results[0].name = {title: 'Mr', first: 'Luukas', last: 'Lahti'}
+
+
+// Сделать карточки для 5 пользователей, которых вы получаете с сервера
+// В каждой карточке должно быть имя, пол, email, телефон и картинка пользователя
