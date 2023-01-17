@@ -48,7 +48,7 @@ input {
 .product-color {
     margin: 15px 0;
 }
-.delete-btn {
+.delete-btn, .edit-btn {
     margin-top: 20px;
     background-color: rgb(181, 44, 44);
     padding: 10px 15px;
@@ -57,6 +57,9 @@ input {
     outline: none;
     color: white;
     font-size: 20px;
+}
+.edit-btn {
+    background-color: rgb(15, 37, 201);
 }
 h1, h2 {
     font-size: 36px;

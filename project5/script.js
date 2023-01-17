@@ -65,11 +65,28 @@ button.addEventListener("click", function() {
       return res.json() // == body == promise. внутри promise лежит body
     })
     .then(function(body) {
-        console.log(body)
+        console.log(body) // {id: }
     })
 })
 
 
+// 
+// При нажатии на кнопку удалить, удалить соответствующий продукт(div)
+//  Если нажали на кнопку с id 1, то удаляем первый продукт
+
+document.addEventListener("click", function(e) {
+    if(e.target.className === "delete-btn") {
+        e.target.parentElement.remove()
+    }
+    if(e.target.className === "edit-btn") {
+       console.log("редактирование")
+    }
+})
+
+/*
+    elem.parentElement - находим родительский элемент тега
+    elem.remove() - удалить элемент из DOM
+*/
 /*
     fetch принимает два аргумента:
     1. ссылка на API (эндпоинт)
@@ -88,4 +105,9 @@ button.addEventListener("click", function() {
         }
 
         JSON.stringify() - метод, который конвертирует JS объект в json
+*/
+
+
+/*
+    Задача. при нажатии на кнопку редактировать, в консоли отобразить "начинаем редактирование"
 */

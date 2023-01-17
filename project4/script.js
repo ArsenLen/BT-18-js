@@ -34,6 +34,7 @@ function showProductForEach(arr) {
                     <p class="product-color"><b>Цвет</b>: ${element.color}</p>
                     <p class="product-price"><b>Цена</b>: ${element.price} сом</p>
                     <button class="delete-btn" id=${element.id}>Удалить</button>
+                    <button class="edit-btn" id=${element.id}>Редактировать</button>
                 </div>
             `
     })
@@ -87,38 +88,50 @@ function showNotification() {
 }
 
 // Вешаем слушатель события на input и вызываем фукнция фильтрации каждый раз, когда пользователь что-то вводит
-productSearch.addEventListener("input", function(e) {
-    // e.target - элемент, который вызвал событие
-    console.log(productSearch.value) // строка, которую вводит пользователь
-    let queryStr = productSearch.value // строка запроса фильтрации
-    let filteredProducts = filterProducts(queryStr) // отфильтрованный массив
-    showProductForEach(filteredProducts)
-})
+// productSearch.addEventListener("input", function(e) {
+//     // e.target - элемент, который вызвал событие
+//     console.log(productSearch.value) // строка, которую вводит пользователь
+//     let queryStr = productSearch.value // строка запроса фильтрации
+//     let filteredProducts = filterProducts(queryStr) // отфильтрованный массив
+//     showProductForEach(filteredProducts)
+// })
 
 
-// функция, которая принимает строку и фильтрует массив
-function filterProducts(str) {
-    // содержится ли подстрока str в свойстве name каждого объекта
-    // содержится ли введенное значение в имени продукта
-    return products.filter(function(product) {
-        return product.name.includes(str)
-    })
-}
+// // функция, которая принимает строку и фильтрует массив
+// function filterProducts(str) {
+//     // содержится ли подстрока str в свойстве name каждого объекта
+//     // содержится ли введенное значение в имени продукта
+//     return products.filter(function(product) {
+//         return product.name.includes(str)
+//     })
+// }
 
-// слушаем нажатие по кнопкам delete-btn
+
+// слушаем нажатие по кнопкам delete-btn, чтобы удалить элемент
 document.addEventListener("click", function(e) {
     if(e.target.className === "delete-btn") {
-        deleteProduct(e.target.id) // 4
+        deleteProduct(e.target.id, e.target.parentElement) // 4
+    }
+    if(e.target.className === "edit-btn") {
+        // операция редактирование
+        console.log("update")
     }
 })
-
-// удаление документа с сервера
-function deleteProduct(id) {
+// фукнция удаления документа с сервера.
+function deleteProduct(id, elem) {
     fetch(`http://localhost:3000/products/${id}`, { // http://localhost:3000/products/4
         method : "DELETE"
     })
+    .then(function(res) {
+        elem.remove()
+    })
 }
 
+// функция редактирования 
+
+/*
+  После удаления элемента с сервера, удалить его в html
+*/
 /* 
     ДЗ. После удаления продукта перерисововать интерфейс без перезагрузки страницы
         Отобразить уведомление об удалении, если оно прошло успешно. 
