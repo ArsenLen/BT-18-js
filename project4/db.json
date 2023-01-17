@@ -4,7 +4,8 @@
       "id": 1,
       "name": "Iphone 14",
       "price": 10000,
-      "color": "pink"
+      "color": "pink",
+      "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg"
     },
     {
       "id": 2,
@@ -17,6 +18,13 @@
       "name": "Xiaomi Redmi M523",
       "price": 150000,
       "color": "white"
+    },
+    {
+      "name": "Test",
+      "price": 2456,
+      "color": "#fa0000",
+      "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+      "id": 4
     }
   ]
 }

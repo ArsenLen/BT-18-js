@@ -111,3 +111,21 @@ document.addEventListener("click", function(e) {
 /*
     Задача. при нажатии на кнопку редактировать, в консоли отобразить "начинаем редактирование"
 */
+
+
+let notification = document.querySelector('.notification')
+let notificationText = document.querySelector('.notification-text')
+
+function showNotificaton(color, text) {
+    notification.style.display = "block"
+    notification.style.backgroundColor = color
+    notificationText.innerText = text
+    setTimeout(function() {
+        notification.style.display = "none"
+    }, 3000)
+}
+
+// Например продукт добавлен
+showNotificaton("red", "Продукт удален")
+
+// showNotificaton("red", "Продукт удален")

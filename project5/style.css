@@ -1,0 +1,13 @@
+.notification {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    padding: 30px 25px;
+    background-color: seagreen;
+}
+.notification-text {
+    font-size: 24px;
+    text-align: center;
+    font-style: italic;
+}

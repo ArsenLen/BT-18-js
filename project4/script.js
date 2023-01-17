@@ -4,6 +4,7 @@ let productForm = document.querySelector("form")
 let productName = document.querySelector("input[name='product-name']")
 let productPrice = document.querySelector("input[name='product-price']")
 let productColor = document.querySelector("input[name='product-color']")
+let productImg = document.querySelector("input[name='product-img']")
 let notification = document.querySelector(".notification")
 let productSearch = document.querySelector(".product-search")
 const API_URL = 'http://localhost:3000/products'
@@ -28,6 +29,7 @@ function showProductForEach(arr) {
     arr.forEach(function(element) {
         productsContainer.innerHTML += `
                 <div class="product">
+                    <img src="${element.img}" class="product-img">
                     <h5 class="product-name">
                         ${element.name} 
                     </h5>
@@ -46,11 +48,13 @@ productForm.addEventListener("submit", function(event) {
     let newName = productName.value
     let newPrice = Number(productPrice.value)
     let newColor = productColor.value
+    let newImg = productImg.value
     
     let productInfo = {
         name: newName,
         price: newPrice,
-        color: newColor
+        color: newColor,
+        img: newImg
     }
     // Отправка post запроса с телом, в котором лежит JSON строка. 
     // JSON строка конвертируется из объекта productInfo
@@ -78,6 +82,7 @@ function clearInputs() {
     productName.value = ''
     productPrice.value = ''
     productColor.value = '#000000'
+    productImg.value = ''
 }
 // Отображаем уведомление об отправке
 function showNotification() {

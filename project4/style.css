@@ -38,6 +38,11 @@ input {
     margin: 10px;
     border-radius: 8px;
 }
+.product-img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
 .product-name {
     font-size: 24px;
     text-align: center;
