@@ -1,0 +1,124 @@
+{
+    "products" : [
+        {
+            "id": 1,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Холодильники"
+        },
+        {
+            "id": 2,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Холодильники"
+        },
+        {
+            "id": 3,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Телевизоры"
+        },
+        {
+            "id": 4,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Телевизоры"
+        },
+        {
+            "id": 5,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Телевизоры"
+        },
+        {
+            "id": 6,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Стиральные машины"
+        },
+        {
+            "id": 7,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Стиральные машины"
+        },
+        {
+            "id": 8,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Стиральные машины"
+        },
+        {
+            "id": 9,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Кондиционеры"
+        },
+        {
+            "id": 10,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Кондиционеры"
+        },
+        {
+            "id": 11,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Кондиционеры"
+        },
+        {
+            "id": 12,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Микроволновые печи"
+        },
+        {
+            "id": 13,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Микроволновые печи"
+        },
+        {
+            "id": 14,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Микроволновые печи"
+        },
+        {
+            "id": 15,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Холодильники"
+        },
+
+        {
+            "id": 16,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Холодильники"
+        },
+        {
+            "id": 17,
+            "name": "Iphone 14",
+            "price": 10000,
+            "img": "https://login.kg/image/cache/catalog/new/Phones/Apple/iPhone%2014/Pro-Pro%20Max/3-500x500.jpg",
+            "category" : "Холодильники"
+        }
+    ]
+}
