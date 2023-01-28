@@ -43,7 +43,7 @@ function showCategories(arr) {
     let uniqueCategoriesArray = [...uniqueCategories] // Array.from() - позволяет сделать итерируемый массив из масивоподобных типов данных
     console.log(uniqueCategoriesArray)
 
-    // ДЗ. Отрисоваться массив uniqueCategoriesArray. 
+    // ДЗ. Отрисовать массив uniqueCategoriesArray. 
     // Отрисовать уникальные категории
     uniqueCategoriesArray.forEach(function(el) {
         categoriesContainer.innerHTML += `
@@ -53,14 +53,14 @@ function showCategories(arr) {
 }
 
 /*
- // ДЗ. Отрисоваться массив uniqueCategoriesArray. 
+ // ДЗ. Отрисовать массив uniqueCategoriesArray. 
     // Отрисовать уникальные категории
     При нажатии на категорию, в консоли отображать ее название
 */
 
 /*
-let uniqueCategories = new Set(['hello', 'hello', 'hello'])
-console.log(uniqueCategories)
+    let uniqueCategories = new Set(['hello', 'hello', 'hello'])
+    console.log(uniqueCategories)
 */
 
 /* 
@@ -77,3 +77,4 @@ console.log(uniqueCategories)
 /*
     json-server --watch db.json --port 3001     (3002, 3003, 3004)
 */
+

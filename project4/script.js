@@ -58,6 +58,7 @@ productForm.addEventListener("submit", function(event) {
     }
     // Отправка post запроса с телом, в котором лежит JSON строка. 
     // JSON строка конвертируется из объекта productInfo
+    // addProduct(productInfo)
     fetch(API_URL, {
         method: "POST",
         headers: {
@@ -76,6 +77,23 @@ productForm.addEventListener("submit", function(event) {
     // Очистка полей ввода после добавления продукта
     clearInputs() 
 })
+
+async function addProduct(product) {
+    try {
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      });
+        getProducts()
+        showNotification()
+    } catch (err) {
+      console.log(err);
+    }
+
+}
 
 // Очищаем поля ввода после отправки формы
 function clearInputs() {
