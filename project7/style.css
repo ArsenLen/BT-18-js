@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    height: 100vh; /* 100vh - вся высота окна браузера */
+    display: flex;
+}
+.registration-bg {
+    width: 50%;
+}
+.form-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/form-wrapper-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.registration-title {
+    font-size: 45px;
+    color: #4F4F4F;
+    letter-spacing: 0.15em;
+}
+.registration-descr {
+    font-size: 25px;
+    color: rgba(79, 79, 79, 0.8);
+    margin: 20px 0 40px;
+}
+.registration-form {
+    width: 50%;
+}
+.form-control:first-child {
+    margin-bottom: 35px;
+}
+label {
+    color: #4F4F4F;
+}
+input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: 1px solid #CACACA;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 2px 4px 6px rgba(79, 79, 79, 0.15);
+    transition: 2s;
+}
+input:focus {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #03A9F4;
+}
+input[type="submit"] {
+    background: #03A9F4;
+    border: 1px solid #CCCCCC;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #FFFFFF;
+}
+/*
+    .form-control:nth-child(2) { // Второй элемент с классом .form-control
+        margin: 35px
+    }
+*/
