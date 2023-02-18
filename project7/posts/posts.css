@@ -1,0 +1,31 @@
+main {
+    width: 85%;
+    margin: 0 auto;
+}
+article {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.21);
+    padding-bottom: 36px;
+}
+.post-img {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+    filter: grayscale(100%);
+}
+.post-date {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.48);
+}
+.post-title {
+    font-size: 36px;
+    font-weight: 700;
+}
+.post-descr {
+    font-size: 24px;
+}
+.post-author {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.75);
+}
