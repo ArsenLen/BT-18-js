@@ -7,6 +7,20 @@ header {
     justify-content: center;
     margin-bottom: 40px;
 }
+.header-nav {
+
+}
+.nav-link {
+    font-size: 24px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7)
+}
+.nav-link:not(:last-child) {
+    margin-right: 20px;
+}
+.nav-link.active { /* у элемента есть и тот, и другой класс */
+    color: black;
+}
 .logout-btn {
     position: absolute;
     right: 50px;

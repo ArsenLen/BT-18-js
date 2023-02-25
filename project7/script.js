@@ -51,6 +51,8 @@ async function register(event) {
 const sendBtn = document.querySelector('input[type="submit"]')
 sendBtn.addEventListener('click', register)
 
+
+
 /*  Валидация - проверка на правильность
     1. на фронтенде
         во время считывания и сабмита формы, узнаем, количество симловов в input

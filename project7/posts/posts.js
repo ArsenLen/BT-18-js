@@ -6,7 +6,7 @@
     <article class="post">
             <img src="https://loremflickr.com/423/180" class="post-img" />
             <div class="post-info">
-                <p class="post-date">18 фев 2023</p>
+                <p class="post-date">${new Date(post.date)}</p>
                 <h5 class="post-title">Заголовок</h5>
                 <p class="post-descr">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae, necessitatibus!
@@ -17,3 +17,7 @@
             </div>
     </article>
 */
+
+fetch('http://localhost:3000/posts')
+    .then(res => res.json())
+    .then(data => console.log(new Date(data[1].date)))

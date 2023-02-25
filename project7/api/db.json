@@ -9,13 +9,34 @@
       "id": 1
     }
   ],
-  "posts" : [
+  "posts": [
     {
       "id": 1,
       "title": "Заголовок",
       "descr": "Описание поста Lorem",
       "author": 1,
       "date": "18 февраля 2023"
+    },
+    {
+      "title": {},
+      "descr": null,
+      "author": 1,
+      "date": 1676987293898,
+      "id": 2
+    },
+    {
+      "title": "TEST",
+      "descr": "12345",
+      "author": 1,
+      "date": 1676987629062,
+      "id": 3
+    },
+    {
+      "title": "title",
+      "descr": "descr",
+      "author": 1,
+      "date": "2023-02-21T13:59:31.649Z",
+      "id": 4
     }
   ]
 }

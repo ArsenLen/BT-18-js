@@ -1,0 +1,33 @@
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.add-form {
+    width: 40%;
+    margin: auto;
+    padding: 40px;
+    background-color: #f2f2f2;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+input[type="text"], textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+input[type="submit"] {
+    display: block;
+    margin: auto;
+    padding: 20px 45px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: black;
+}
