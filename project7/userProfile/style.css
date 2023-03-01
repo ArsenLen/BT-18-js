@@ -20,3 +20,40 @@ p {
     font-size: 24px;
     border-radius: 5px;
 }
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 0;
+}
+.posts-container {
+    width: 95%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.post {
+    width: calc(100% / 3 - 20px);
+    margin: 10px;
+}
+.post p {
+    padding: 0;
+}
+.post-img {
+    width: 100%;
+    border-radius: 8px;
+    filter: grayscale(100%);
+    margin-bottom: 5px;
+}
+.post-date {
+    font-size: 14px;
+}
+.post-title {
+    font-size: 28px;
+}
+.post-descr {
+    font-size: 18px;
+    margin-top: 10px;
+}
+.post-author {
+    font-size: 16px;
+}

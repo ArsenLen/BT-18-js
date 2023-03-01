@@ -24,10 +24,10 @@
 const API_URL = "http://localhost:3000/register"
 // Статичные данные. Динамичные(считываем input после сабмита)
 const userInfo = {
-    email: "admin@mail.ru",
+    email: "user2@mail.ru",
     password: "12345678",
     age: "24",
-    name: "Arsen Iusupov",
+    name: "Login login",
     sex: "male" 
 }
 

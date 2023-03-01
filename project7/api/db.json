@@ -7,6 +7,14 @@
       "name": "Arsen Iusupov",
       "sex": "male",
       "id": 1
+    },
+    {
+      "email": "user2@mail.ru",
+      "password": "$2a$10$PZig9brHuBqoVqYUdeghOOEdYV1D6illsGKQksfITBCXAVBEmWfty",
+      "age": "24",
+      "name": "Login login",
+      "sex": "male",
+      "id": 2
     }
   ],
   "posts": [
@@ -37,6 +45,20 @@
       "author": 1,
       "date": "2023-02-21T13:59:31.649Z",
       "id": 4
+    },
+    {
+      "title": "Title user 2",
+      "descr": "Descr user2 ",
+      "author": 2,
+      "date": "2023-02-25T12:43:23.244Z",
+      "id": 5
+    },
+    {
+      "title": "Title2 user 2",
+      "descr": "Descr2 user2 ",
+      "author": 2,
+      "date": "2023-02-25T12:43:29.567Z",
+      "id": 6
     }
   ]
 }
